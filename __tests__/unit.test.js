@@ -35,3 +35,19 @@ test('Test is example@gmail', () => {
     expect(real).toBe(false);
 });
 
+test('Test is sjhduwnvgbhnjsa a strong password', () => {
+    let real = functions.isStrongPassword("sjhduwnvgbhnjsa");
+    expect(real).toBe(true);
+});
+test('Test is 1jhduwnvgbhnjsa a strong password', () => {
+    let real = functions.isStrongPassword("1jhduwnvgbhnjsa");
+    expect(real).toBe(false);
+});
+test('Test is jhduwnvg1bhnjsa a strong password', () => {
+    let real = functions.isStrongPassword("jhduwnvg1bhnjsa");
+    expect(real).toBe(true);
+});
+test('Test is jhd a strong password', () => {
+    let real = functions.isStrongPassword("jhd");
+    expect(real).toBe(false);
+});
