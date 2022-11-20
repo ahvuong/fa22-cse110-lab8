@@ -68,3 +68,22 @@ test('Test is 11/19/20221 a date', () => {
     let real = functions.isDate("11/19/20221");
     expect(real).toBe(false);
 });
+
+test('9F a hex Color', () => {
+    let real = functions.isHexColor("9F");
+    expect(real).toBe(false);
+});
+
+test('1827AF1 a hex Color', () => {
+    let real = functions.isHexColor("1827AF1");
+    expect(real).toBe(false);
+});
+test('FFFFFF a hex Color', () => {
+    let real = functions.isHexColor("FFFFFF");
+    expect(real).toBe(true);
+});
+
+test('1827AF a hex Color', () => {
+    let real = functions.isHexColor("1827AF");
+    expect(real).toBe(true);
+});
